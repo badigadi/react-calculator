@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, rgb(33, 245, 139), rgb(76, 41, 235));
+}
+
+.calc {
+    display: grid;
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: minmax(9rem, auto) repeat(5, 5rem);
+    background-color: black;
+    margin: 6vh auto;
+    max-width: 420px;
+    padding: 30px;
+    justify-content: center;
+    gap: 16px;
+    border-radius: 20px;
+}
+
+.span-two {
+    grid-column: span 2;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgb(70, 68, 68);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px;
+}
+
+button {
+    border-radius: 50px;
+    font-size: 34px;
+    background-color: rgba(88, 91, 94, 0.8);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.output .prev-oper {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.6rem;
+}
+
+.output .curr-oper {
+    color: rgba(255, 255, 255, 1);
+    font-size: 3rem;
+}
+
+button:hover {
+    background-color: rgba(192, 188, 188, 0.7);
+}
+
+button.light-gray {
+    background-color: rgb(192, 188, 188);
+    color: #000;
+    font-size: 30px;
+}
+
+button.light-gray:hover {
+    filter: brightness(1.2);
+}
+
+button.procent {
+    font-weight: 600;
+}
+
+button.orange {
+    background-color: rgb(255, 156, 43);
+    font-weight: 500;
+    font-size: 40px;
+}
+
+button.orange:hover {
+    background-color: #fff;
+    color: rgb(255, 156, 43);
+}
+
+button.cross {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+button.minus {
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+    .calc {
+        display: grid;
+        grid-template-columns: repeat(4, 4rem);
+        grid-template-rows: minmax(6rem, auto) repeat(5, 4rem);
+        padding: 20px;
+        max-width: 340px;
+        margin: 12vh auto;
+    }
+    .output .curr-oper {
+        color: rgba(255, 255, 255, 1);
+        font-size: 2.4rem;
+    }
+    .output .preb-oper {
+        color: rgba(255, 255, 255, 1);
+        font-size: 1.2rem;
+    }
+    button {
+        font-size: 28px;
+    }
+    button.light-gray {
+        font-size: 20px;
+    }
+    button.orange {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 360px) {
+    .calc {
+        display: grid;
+        grid-template-columns: repeat(4, 3.5rem);
+        grid-template-rows: minmax(6rem, auto) repeat(5, 3.5rem);
+        padding: 20px;
+        max-width: 300px;
+    }
+
+}
+
